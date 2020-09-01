@@ -205,7 +205,6 @@ class PN532(object):
             time.sleep(0.3)
         return ack
 
-
     def _ack_wait(self, timeout):
         ack=False
         rx_info=""
@@ -354,7 +353,6 @@ class PN532(object):
             return response[6:6+response[5]]
         else:
             return response
-
 
     def mifare_classic_authenticate_block(self, uid, block_number, key_number, key):
         """Authenticate specified block number for a MiFare classic card.  Uid
