@@ -1,0 +1,11 @@
+[Unit]
+    Description="PiBOX RFID daemon"
+
+[Service]
+    ExecStart=/usr/bin/python /usr/local/lib/pibox/rfidd.py
+    Restart=on-failure
+    Type=notify
+    User=pibox
+
+[Install]
+    WantedBy=default.target
